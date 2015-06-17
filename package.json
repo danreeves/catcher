@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon . --local",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "chmod 777 log.txt"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dan Reeves <hey@danreev.es>",
