@@ -4,7 +4,7 @@ var IS_LOCAL = (process.argv.slice(2).indexOf('--local') > -1);
 
 var log = fs.createWriteStream('log.txt', {'flags': 'a'});
 log.write('Line\tMessage\tURL\n');
-// log.close('closed');
+log.end();
 
 var server = new Hapi.Server();
 
@@ -19,12 +19,13 @@ server.route({
     method: 'GET',
     path:'/',
     handler: function (request, reply) {
+        var log = fs.createWriteStream('log.txt', {'flags': 'a'});
         var line = '';
         Object.keys(request.query).forEach(function (key) {
             line += request.query[key] + '\t';
         });
         line += '\n';
-        log.write(line);
+        log.end(line);
         reply('200 OK');
     }
 });
