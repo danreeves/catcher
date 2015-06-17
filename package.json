@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon . --local",
+    "dev": "nodemon . --local",
+    "start": "forerver start index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Dan Reeves <hey@danreev.es>",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^8.6.1"
+    "forever": "^0.14.1",
+    "graceful-fs": "^3.0.8",
+    "hapi": "^8.6.1",
+    "nodemon": "^1.3.7"
   }
 }
