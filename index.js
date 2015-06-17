@@ -24,7 +24,7 @@ server.route({
         });
         line += '\n';
         log.write(line);
-        reply();
+        reply('200 OK');
     }
 });
 
