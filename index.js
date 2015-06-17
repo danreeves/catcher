@@ -8,7 +8,7 @@ log.write('Line\tMessage\tURL\n');
 var server = new Hapi.Server();
 
 server.connection({
-    port: (IS_LOCAL) ? 8080 : 80,
+    port: (IS_LOCAL) ? 8080 : 5000,
     routes: {
         cors: true
     }
