@@ -4,7 +4,7 @@ var IS_LOCAL = (process.argv.slice(2).indexOf('--local') > -1);
 
 var log = fs.createWriteStream('log.txt', {'flags': 'a'});
 log.write('Line\tMessage\tURL\n');
-log.close('closed');
+// log.close('closed');
 
 var server = new Hapi.Server();
 
