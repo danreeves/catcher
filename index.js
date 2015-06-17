@@ -8,6 +8,7 @@ log.end();
 
 var server = new Hapi.Server();
 
+// locally it runs on 8080, dokku runs on 5000
 server.connection({
     port: (IS_LOCAL) ? 8080 : 5000,
     routes: {
@@ -26,7 +27,7 @@ server.route({
         });
         line += '\n';
         log.end(line);
-        reply('200 OK');
+        reply();
     }
 });
 
