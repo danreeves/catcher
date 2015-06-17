@@ -3,7 +3,7 @@ var fs = require('graceful-fs');
 var IS_LOCAL = (process.argv.slice(2).indexOf('--local') > -1);
 
 var log = fs.createWriteStream('log.txt', {'flags': 'a'});
-log.write('Line\tMessage\tURL\n');
+log.write('Line\tMessage\tURL\tUser Agent\n');
 log.end();
 
 var server = new Hapi.Server();
